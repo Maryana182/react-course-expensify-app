@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 import expenses from '../fixtures/expenses';
 import { EditExpensePage } from '../../components/EditExpensePage';
 
-let editExpense, removeExpense, history, wrapper;
+let startEditExpense, startRemoveExpense, history, wrapper;
 
 beforeEach(() => {
   statEditExpense = jest.fn();
@@ -11,8 +11,8 @@ beforeEach(() => {
   history = { push: jest.fn() };
   wrapper = shallow(
     <EditExpensePage
-      editExpense={startEditExpense}
-      removeExpense={startRemoveExpense}
+      startEditExpense={startEditExpense}
+      startRemoveExpense={startRemoveExpense}
       history={history}
       expense={expenses[2]}
     />
